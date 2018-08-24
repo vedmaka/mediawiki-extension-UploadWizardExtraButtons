@@ -9,27 +9,36 @@
 	"license-name": "MIT",
 	"type": "other",
 	"AutoloadClasses": {
-		"UploadWizardExtraButtons": "UploadWizardExtraButtons.class.php",
-		"UploadWizardExtraButtonsHooks": "UploadWizardExtraButtons.hooks.php",
-		"SpecialUploadWizardExtraButtons": "specials/SpecialUploadWizardExtraButtons.php"
+		"UploadWizardExtraButtons": "UploadWizardExtraButtons.class.php"
 	},
-	"callback": "UploadWizardExtraButtonsHooks::onExtensionLoad",
-	"ExtensionMessagesFiles": {
-		"UploadWizardExtraButtonsAlias": "UploadWizardExtraButtons.i18n.alias.php"
+	"Hooks": {
+		"BeforePageDisplay": [
+			"UploadWizardExtraButtons::onBeforePageDisplay"
+		],
+		"ResourceLoaderGetConfigVars": [
+			"UploadWizardExtraButtons::onResourceLoaderGetConfigVars"
+		]
 	},
-	"Hooks": {},
 	"MessagesDirs": {
 		"UploadWizardExtraButtons": [
 			"i18n"
 		]
 	},
+	"config": {
+		"UploadWizardExtraButtonTitle": {
+			"value": "Test"
+		},
+		"UploadWizardExtraButtonHref": {
+			"value": ""
+		}
+	},
 	"ResourceModules": {
-		"ext.uploadwizardextrabuttons.foo": {
+		"ext.uploadwizardextrabuttons": {
 			"scripts": [
-				"modules/ext.UploadWizardExtraButtons.foo.js"
+				"modules/ext.UploadWizardExtraButtons.js"
 			],
-			"styles": [
-				"modules/ext.UploadWizardExtraButtons.foo.css"
+			"dependencies": [
+				"ext.uploadWizard"
 			]
 		}
 	},
