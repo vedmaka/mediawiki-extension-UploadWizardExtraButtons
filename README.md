@@ -10,7 +10,7 @@ Adds a single extra button to UploadWizard successful upload screen.
 # Installation
 
 * Clone the repository contents into `/extesions/UploadWizardExtraButtons` folder
-* Add `wfLoadExtension('UploadWizardExtraButtons'');` to the bottom of your `LocalSettings.php` file
+* Add `wfLoadExtension('UploadWizardExtraButtons');` to the bottom of your `LocalSettings.php` file
 
 # Configuration
 
