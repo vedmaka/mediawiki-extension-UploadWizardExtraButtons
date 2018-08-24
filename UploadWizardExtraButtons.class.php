@@ -29,7 +29,7 @@ class UploadWizardExtraButtons
 		if( $wgUploadWizardExtraButtonHref === "" ) {
 			$wgUploadWizardExtraButtonHref = Title::newMainPage()->getFullURL();
 		}
-		$vars['wgUploadWizardExtraButtonTitle'] = $wgUploadWizardExtraButtonTitle;
+		$vars['wgUploadWizardExtraButtonTitle'] = wfMessage($wgUploadWizardExtraButtonTitle)->text();
 		$vars['wgUploadWizardExtraButtonHref'] = $wgUploadWizardExtraButtonHref;
 	}
 

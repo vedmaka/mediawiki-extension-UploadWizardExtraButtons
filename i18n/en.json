@@ -1,6 +1,9 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Alexey"
+		]
 	},
-	"uploadwizardextrabuttons-desc": "This is an example extension"
+	"uploadwizardextrabuttons-desc": "Adds a single extra button to UploadWizard successful upload screen",
+	"uploadwizardextrabuttons-button-title": "Test"
 }

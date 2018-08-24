@@ -1,6 +1,7 @@
 /**
- * This overrides default uw.ui.Thanks class from UploadWizard
- *
+ * This overrides default uw.ui.Thanks class from UploadWizard.
+ * It should be upgrade-safe because the class calls constructor of the original class
+ * and after that adds a bit of custom code.
  */
 
 ( function ( mw, $, uw, OO ) {

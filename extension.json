@@ -26,7 +26,7 @@
 	},
 	"config": {
 		"UploadWizardExtraButtonTitle": {
-			"value": "Test"
+			"value": "uploadwizardextrabuttons-button-title"
 		},
 		"UploadWizardExtraButtonHref": {
 			"value": ""
