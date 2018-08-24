@@ -25,11 +25,11 @@ class UploadWizardExtraButtons
 	 * @param array $vars
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgUploadWizardExtraButtonTitle, $wgUploadWizardExtraButtonHref;
+		global $wgUploadWizardExtraButtonHref;
+
 		if( $wgUploadWizardExtraButtonHref === "" ) {
 			$wgUploadWizardExtraButtonHref = Title::newMainPage()->getFullURL();
 		}
-		$vars['wgUploadWizardExtraButtonTitle'] = wfMessage($wgUploadWizardExtraButtonTitle)->text();
 		$vars['wgUploadWizardExtraButtonHref'] = $wgUploadWizardExtraButtonHref;
 	}
 

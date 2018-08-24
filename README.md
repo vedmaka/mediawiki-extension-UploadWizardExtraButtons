@@ -14,5 +14,5 @@ Adds a single extra button to UploadWizard successful upload screen.
 
 # Configuration
 
-* `$wgUploadWizardExtraButtonTitle` defines a message key to be used for button title (by default it's `uploadwizardextrabuttons-button-title`)
+* `uploadwizardextrabuttons-button-title` i18n key defines a message key to be used for button title (by default it's `Test`), you can alter it via `Special:AllMessages`
 * `$wgUploadWizardExtraButtonHref` defines button link URL, by default it will use Main Page url 

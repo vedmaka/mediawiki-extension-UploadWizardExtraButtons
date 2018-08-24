@@ -25,7 +25,7 @@
 		);
 
 		this.testButton = new OO.ui.ButtonWidget( {
-			label: mw.config.get( 'wgUploadWizardExtraButtonTitle' ),
+			label: mw.msg( 'uploadwizardextrabuttons-button-title' ),
 			href: mw.config.get( 'wgUploadWizardExtraButtonHref' )
 		} );
 

@@ -39,6 +39,9 @@
 			],
 			"dependencies": [
 				"ext.uploadWizard"
+			],
+			"messages": [
+				"uploadwizardextrabuttons-button-title"
 			]
 		}
 	},
