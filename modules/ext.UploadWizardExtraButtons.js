@@ -1,3 +1,8 @@
+/**
+ * This overrides default uw.ui.Thanks class from UploadWizard
+ *
+ */
+
 ( function ( mw, $, uw, OO ) {
 
 	// Save old Thanks view
