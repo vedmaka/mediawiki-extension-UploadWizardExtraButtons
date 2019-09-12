@@ -19,18 +19,30 @@
 	 */
 	uw.ui.NewThanks = function UWUINewThanks( config ) {
 
+		var campaign = mw.Uri().query.campaign || false,
+			whitelistedCampaigns = mw.config.get( 'wgUploadWizardExtraButtonCampaigns' ),
+			mainPage, subPage;
+
 		uw.ui.oldThanks.call(
 			this,
 			config
 		);
 
-		this.testButton = new OO.ui.ButtonWidget( {
-			label: mw.msg( 'uploadwizardextrabuttons-button-title' ),
-			href: mw.config.get( 'wgUploadWizardExtraButtonHref' )
-		} );
+		if ( campaign && whitelistedCampaigns.length ) {
+			if ( whitelistedCampaigns.indexOf( campaign ) !== -1 ) {
 
-		this.buttonGroup.insertItem( this.testButton, 0 );
-		this.buttonGroup.moveItem( this.testButton, 0 );
+				mainPage = mw.config.get( 'UploadWizardConfig' ).fields[ 0 ].initialValue;
+				subPage = mainPage.substr( 0, mainPage.indexOf( '/' ) );
+				this.testButton = new OO.ui.ButtonWidget( {
+					label: mw.config.get( 'wgUploadWizardExtraButtonTitle' ),
+					href: mw.config.get( 'wgServer' ) + mw.config.get( 'wgArticlePath' ).replace( '$1', encodeURI( subPage || mainPage ) )
+				} );
+
+				this.buttonGroup.insertItem( this.testButton, 0 );
+				this.buttonGroup.moveItem( this.testButton, 0 );
+
+			}
+		}
 
 	};
 

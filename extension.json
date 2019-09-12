@@ -30,7 +30,10 @@
 		},
 		"UploadWizardExtraButtonHref": {
 			"value": ""
-		}
+		},
+        "UploadWizardExtraButtonCampaigns": {
+            "value": []
+        }
 	},
 	"ResourceModules": {
 		"ext.uploadwizardextrabuttons": {
@@ -39,9 +42,6 @@
 			],
 			"dependencies": [
 				"ext.uploadWizard"
-			],
-			"messages": [
-				"uploadwizardextrabuttons-button-title"
 			]
 		}
 	},

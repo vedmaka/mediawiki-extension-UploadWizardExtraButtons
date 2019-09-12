@@ -25,12 +25,13 @@ class UploadWizardExtraButtons
 	 * @param array $vars
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgUploadWizardExtraButtonHref;
-
+		global $wgUploadWizardExtraButtonTitle, $wgUploadWizardExtraButtonHref, $wgUploadWizardExtraButtonCampaigns;
 		if( $wgUploadWizardExtraButtonHref === "" ) {
 			$wgUploadWizardExtraButtonHref = Title::newMainPage()->getFullURL();
 		}
+		$vars['wgUploadWizardExtraButtonTitle'] = 'Return to the meeting page';#wfMessage($wgUploadWizardExtraButtonTitle)->text();
 		$vars['wgUploadWizardExtraButtonHref'] = $wgUploadWizardExtraButtonHref;
+        $vars['wgUploadWizardExtraButtonCampaigns'] = $wgUploadWizardExtraButtonCampaigns;
 	}
 
 }
